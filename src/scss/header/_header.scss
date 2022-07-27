@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: v.$separacion 0;
+    align-items: center;
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 30rem;
+        margin-bottom: 2rem;
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+    }
+}
